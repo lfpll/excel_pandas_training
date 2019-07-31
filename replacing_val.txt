@@ -1,0 +1,5 @@
+def replace_bool_column(df,to_be_replace,replacer,columns,fill_value): 
+    '''
+    '''
+    df[columns] = df[columns].applymap(lambda val: replacer if to_be_replace == val else val).fillna(fill_value)
+    return df
